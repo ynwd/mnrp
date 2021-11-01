@@ -3,6 +3,10 @@
 		"public": "web/modules/home/build",
 		"rewrites": [
 			{
+				"source": "**",
+				"function": "Main"
+			},
+			{
 				"source": "/",
 				"destination": "index.html"
 			}

@@ -9,4 +9,4 @@ steps:
       npm install
 
   - name: gcr.io/fastro-319406/firebase
-    args: ['deploy', '--project=fastro-319406', '--only=hosting']
+    args: ['deploy', '--project=fastro-319406']

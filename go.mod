@@ -1,5 +1,5 @@
-module github.com/ynwd/monorepo
+module github.com/ynwd/mnrp
 
 go 1.17
 
-require github.com/fastrodev/fastrex v0.0.0-20211008073151-687f0b90ec18 // indirect
+require github.com/fastrodev/fastrex v0.0.0-20211031022818-0858cde912c6 // indirect

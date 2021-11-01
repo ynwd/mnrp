@@ -8,7 +8,7 @@ steps:
     args:
     - -c
     - | 
-      cd web/modules/home && npm install && npm build
+      cd web/modules/home && npm install && npm run build
       cd ../../..
       npm install
 

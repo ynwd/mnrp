@@ -1,10 +1,10 @@
 steps:
-  - name: node:alpine
+  - name: node
     entrypoint: npm
     args: ['-v']
 
-  - name: node:alpine
-    entrypoint: /bin/ash
+  - name: node
+    entrypoint: /bin/bash
     args:
     - -c
     - | 

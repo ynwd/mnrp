@@ -2,16 +2,14 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-async function getList() {
-  return await fetch('/api')
-}
-
 function App() {
   const [value, setValue] = useState("");
   useEffect(() => {
-    getList().then(async t => {
-      setValue(await t.text())
-    })
+    async function getList() {
+      let response = await fetch('/api')
+      setValue(await response.text())
+    }
+    getList()
   }, [value]);
 
   return (

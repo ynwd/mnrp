@@ -1,5 +1,5 @@
 steps:
-  - name: node
+  - name: node:lts
     entrypoint: /bin/bash
     args:
     - -c

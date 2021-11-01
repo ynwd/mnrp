@@ -4,11 +4,8 @@ steps:
     args: ['install']
 
   - name: node
-    entrypoint: /bin/bash
-    args:
-    - -c
-    - | 
-      npm run build -w @fstr/home
+    entrypoint: npm
+    args: ['run','build', '-w', '@fstr/home']
 
   - name: gcr.io/fastro-319406/firebase
     args: ['deploy', '--project=fastro-319406', '--only=hosting']

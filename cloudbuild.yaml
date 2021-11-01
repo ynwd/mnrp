@@ -9,4 +9,12 @@ steps:
       npm install
 
   - name: gcr.io/fastro-319406/firebase
-    args: ['deploy', '--project=fastro-319406']
+    args: ['deploy', '--project=fastro-319406', '--only=hosting']
+  
+
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
+    entrypoint: /bin/bash
+    args:
+    - -c
+    - |
+      gcloud functions deploy Main --source=. --trigger-http --allow-unauthenticated

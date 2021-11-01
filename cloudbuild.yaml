@@ -4,8 +4,8 @@ steps:
     args:
     - -c
     - | 
-      cd web/modules/home && npm install && npm run build
-      cd ../../..
+      npm install -verbose -w @fastro/home
+      npm run build -w @fastro/home
       npm install
 
   - name: gcr.io/fastro-319406/firebase

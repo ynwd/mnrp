@@ -7,7 +7,6 @@ steps:
       cd web/modules/home && npm install && npm run build
       cd ../../..
       npm install
-      ls -ls web/modules/home/build
 
   - name: gcr.io/fastro-319406/firebase
     args: ['deploy', '--project=fastro-319406', '--only=hosting']

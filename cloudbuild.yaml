@@ -1,20 +1,16 @@
 steps:
-  - name: node
+  - name: node:alpine
     entrypoint: npm
     args: ['-v']
 
-  - name: node
-    entrypoint: npm
-    args: ['install', '-w', '@fstr/home']
-
-
-  - name: node
-    entrypoint: npm
-    args: ['install']
-
-  - name: node
-    entrypoint: npm
-    args: ['run','build', '-w', '@fstr/home']
+  - name: node:alpine
+    entrypoint: /bin/ash
+    args:
+    - -c
+    - | 
+      npm install -verbose -w @fstr/home
+      npm install
+      npm run build -w @fstr/home
 
   - name: gcr.io/fastro-319406/firebase
     args: ['deploy', '--project=fastro-319406', '--only=hosting']

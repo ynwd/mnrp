@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 async function getList() {
-  return await fetch('http://localhost:8080/api')
+  return await fetch('/api')
 }
 
 function App() {

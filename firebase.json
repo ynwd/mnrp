@@ -1,6 +1,6 @@
 {
 	"hosting": {
-		"public": "web/modules/home/build",
+		"public": "web/home/build",
 		"rewrites": [
 			{
 				"source": "**",

@@ -1,4 +1,10 @@
 steps:
+  - name: golang:alpine
+    entrypoint: /bin/ash
+    args:
+    - -c
+    - go run cmd/build/main.go
+
   - name: node:lts
     entrypoint: /bin/bash
     args:
@@ -10,11 +16,9 @@ steps:
 
   - name: gcr.io/fastro-319406/firebase
     args: ['deploy', '--project=fastro-319406', '--only=hosting']
-  
 
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: /bin/bash
     args:
     - -c
-    - |
-      gcloud functions deploy Main --source=. --trigger-http --allow-unauthenticated
+    - gcloud functions deploy Main --source=. --trigger-http --allow-unauthenticated

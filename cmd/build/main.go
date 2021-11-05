@@ -14,7 +14,7 @@ type Data struct {
 
 func main() {
 	data := Data{"Fastro.app - Beta", "The best interface is no interface"}
-	generate("cmd/build/index.html", "web/home/public/index.html", data)
+	generate("cmd/build/index.gohtml", "web/home/public/index.html", data)
 }
 
 func generate(tmpl string, dest string, data Data) {

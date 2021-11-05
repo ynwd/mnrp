@@ -12,7 +12,7 @@ func CreateApp() fastrex.App {
 	app.Ctx(ctx)
 	app.Get("/api", func(req fastrex.Request, res fastrex.Response) {
 		res.Header().Set("Access-Control-Allow-Origin", "*")
-		res.Send("The Best Interface Is No Interface")
+		res.Send("The best interface is no interface")
 	})
 
 	return app

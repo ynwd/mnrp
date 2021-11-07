@@ -2,6 +2,9 @@
     "name": "@fastro/monorepo",
     "private": true,
     "version": "1.0.0",
+    "scripts": {
+        "home": "npm install -verbose -w @fastro/home && npm test -w @fastro/home -- --watchAll=false && npm run build -w @fastro/home"
+    },
     "workspaces": [
         "./web/*"
     ]

@@ -8,3 +8,7 @@ func main() {
 		panic(err)
 	}
 }
+
+func Oke() string {
+	return "oke"
+}

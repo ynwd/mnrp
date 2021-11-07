@@ -3,17 +3,15 @@ steps:
     entrypoint: /bin/ash
     args:
     - -c
-    - go run cmd/build/main.go
+    - |
+      go test ./...
+      go run cmd/build/main.go
 
   - name: node:lts
     entrypoint: /bin/bash
     args:
     - -c
-    - | 
-      npm install -verbose -w @fastro/home
-      npm test -w @fastro/home -- --watchAll=false"
-      npm run build -w @fastro/home
-      npm install
+    - npm run home
 
   - name: gcr.io/fastro-319406/firebase
     args: ['deploy', '--project=fastro-319406', '--only=hosting']

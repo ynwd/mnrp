@@ -5,20 +5,21 @@ import './App.css';
 function App() {
   const [value, setValue] = useState("");
   useEffect(() => {
-    async function getList() {
+    async function getText() {
       let response = await fetch('/api')
-      setValue(await response.text())
+      const d = await response.text()
+      setValue(d)
     }
-    getList()
+    getText()
   }, [value]);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="txt">
+        <h3>
           {value}
-        </p>
+        </h3>
       </header>
     </div>
   );

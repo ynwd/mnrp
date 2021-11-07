@@ -11,6 +11,7 @@ steps:
     - -c
     - | 
       npm install -verbose -w @fastro/home
+      npm test -w @fastro/home -- --watchAll=false"
       npm run build -w @fastro/home
       npm install
 
